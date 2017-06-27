@@ -1,0 +1,14 @@
+@media all
+{
+    body {
+        font-size: 18px;
+        max-width: 70%;
+        margin: auto;
+    }
+    h2 {
+        color: #ED412D;
+    }
+    ul {
+        padding-left: 1em;
+    }
+}
