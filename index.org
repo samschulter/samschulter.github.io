@@ -21,12 +21,11 @@ Email: samuel <at> nec-labs <dot> com
 
 [[https://scholar.google.com/citations?user=VQ6dsFEAAAAJ][Google Scholar]]
 
-* Preprints
-- *Learning to Look around Objects for Top-View Representations of Outdoor Scenes*. S. Schulter, M. Zhai, N. Jacobs, M. Chandraker. ([[http://arxiv.org/abs/1803.10870][PDF]])
-- *Memory Warps for Learning Long-Term Online Video Representations*. T-H. Vu, W. Choi, S. Schulter, M. Chandraker. ([[http://arxiv.org/abs/1803.10861][PDF]])
-
 * Publications
-- *Learning to Adapt Structured Output Space for Semantic Segmentation*. Y-H. Tsai, W-C. Hung, S. Schulter, K. Sohn, M-H. Yang, M. Chandraker. CVPR 2018. (PDF coming soon)
+- *Learning to Simulate*. N. Ruiz, S. Schulter, M. Chandraker. ICLR 2019. ([[https://arxiv.org/abs/1810.02513][PDF]])
+- *Memory Warps for Learning Long-Term Online Video Representations*. T-H. Vu, W. Choi, S. Schulter, M. Chandraker. WACV 2019. ([[http://arxiv.org/abs/1803.10861][PDF]])
+- *Learning to Look around Objects for Top-View Representations of Outdoor Scenes*. S. Schulter, M. Zhai, N. Jacobs, M. Chandraker. ECCV 2018. ([[http://arxiv.org/abs/1803.10870][PDF]])
+- *Learning to Adapt Structured Output Space for Semantic Segmentation*. Y-H. Tsai, W-C. Hung, S. Schulter, K. Sohn, M-H. Yang, M. Chandraker. CVPR 2018. ([[http://openaccess.thecvf.com/content_cvpr_2018/papers/Tsai_Learning_to_Adapt_CVPR_2018_paper.pdf][PDF]], [[http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/1435-supp.pdf][SUPP]])
 - *Deep Network Flow for Multi-Object Tracking*. S. Schulter, P. Vernaza, W. Choi, M. Chandraker. CVPR 2017. [[http://www.nec-labs.com/uploads/images/Department-Images/MediaAnalytics/papers/cvpr17_deepnetworkflow.pdf][(PDF]], [[http://www.nec-labs.com/uploads/images/Department-Images/MediaAnalytics/papers/cvpr17_deepnetworkflow_supp.pdf][SUPP]])
 - *Loss-Specific Training of Random Forests for Super-Resolution*. A. Grabner, G. Poier, M. Opitz, S. Schulter, P. M. Roth. Computer Vision Winter Workshop 2017. ([[http://cvww2017.prip.tuwien.ac.at/papers/CVWW2017_paper_23.pdf][PDF]])
 
