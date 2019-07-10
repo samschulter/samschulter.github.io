@@ -3,23 +3,30 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title></title>
-<!-- 2018-12-21 Fri 21:26 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Samuel Schulter" />
+<!-- 2019-07-09 Tue 22:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Samuel Schulter" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
   .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -46,27 +53,111 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
+  .footpara { display: inline; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -86,6 +177,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
@@ -94,7 +186,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -138,13 +230,12 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title"></h1>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Samuel Schulter</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgfd70494" class="outline-2">
+<h2 id="orgfd70494">Samuel Schulter</h2>
+<div class="outline-text-2" id="text-orgfd70494">
 <p>
-I'm a researcher in the <a href="http://www.nec-labs.com/research-departments/media-analytics/media-analytics-home">Media-Analytics Department at NEC-Labs America</a> in Cupertino, CA.
+I'm a senior researcher in the <a href="http://www.nec-labs.com/research-departments/media-analytics/media-analytics-home">Media-Analytics Department at NEC-Labs America</a> in Cupertino, CA.
 My research interests are in computer vision and machine learning. I'm currently working on object detection and tracking in videos and higher-level 3D scene understanding.
 I received my PhD in 2015 from Graz University of Technology under the supervision of Horst Bischof.
 </p>
@@ -159,57 +250,38 @@ Email: samuel &lt;at&gt; nec-labs &lt;dot&gt; com
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Publications</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org48efe71" class="outline-2">
+<h2 id="org48efe71">Publications</h2>
+<div class="outline-text-2" id="text-org48efe71">
 <ul class="org-ul">
-<li><b>Learning to Simulate</b>. N. Ruiz, S. Schulter, M. Chandraker. ICLR 2019. (<a href="https://arxiv.org/abs/1810.02513">PDF</a>)
-</li>
-<li><b>Memory Warps for Learning Long-Term Online Video Representations</b>. T-H. Vu, W. Choi, S. Schulter, M. Chandraker. WACV 2019. (<a href="http://arxiv.org/abs/1803.10861">PDF</a>)
-</li>
-<li><b>Learning to Look around Objects for Top-View Representations of Outdoor Scenes</b>. S. Schulter, M. Zhai, N. Jacobs, M. Chandraker. ECCV 2018. (<a href="http://arxiv.org/abs/1803.10870">PDF</a>)
-</li>
-<li><b>Learning to Adapt Structured Output Space for Semantic Segmentation</b>. Y-H. Tsai, W-C. Hung, S. Schulter, K. Sohn, M-H. Yang, M. Chandraker. CVPR 2018. (<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Tsai_Learning_to_Adapt_CVPR_2018_paper.pdf">PDF</a>, <a href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/1435-supp.pdf">SUPP</a>)
-</li>
-<li><b>Deep Network Flow for Multi-Object Tracking</b>. S. Schulter, P. Vernaza, W. Choi, M. Chandraker. CVPR 2017. <a href="http://www.nec-labs.com/uploads/images/Department-Images/MediaAnalytics/papers/cvpr17_deepnetworkflow.pdf">(PDF</a>, <a href="http://www.nec-labs.com/uploads/images/Department-Images/MediaAnalytics/papers/cvpr17_deepnetworkflow_supp.pdf">SUPP</a>)
-</li>
-<li><b>Loss-Specific Training of Random Forests for Super-Resolution</b>. A. Grabner, G. Poier, M. Opitz, S. Schulter, P. M. Roth. Computer Vision Winter Workshop 2017. (<a href="http://cvww2017.prip.tuwien.ac.at/papers/CVWW2017_paper_23.pdf">PDF</a>)
-</li>
+<li><b>A Parametric Top-View Representation of Complex Road Scenes</b>. Z. Wang, B. Liu, S. Schulter, M. Chandraker. CVPR 2019. (<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_A_Parametric_Top-View_Representation_of_Complex_Road_Scenes_CVPR_2019_paper.pdf">PDF</a>, <a href="http://openaccess.thecvf.com/content_CVPR_2019/supplemental/Wang_A_Parametric_Top-View_CVPR_2019_supplemental.pdf">SUPP</a>)</li>
+<li><b>A Dataset for High-level 3D Scene Understanding of Complex Road Scenes in the Top-View</b>. Z. Wang, B. Liu, S. Schulter, M. Chandraker. CVPR 2019 Workshop on 3D Scene Understanding for Vision, Graphics, and Robotics. (<a href="https://scene-understanding.com/papers/cvpr19_workshop_3d-scene-understanding_camera-ready_parametric-bev-dataset.pdf">PDF</a>)</li>
+<li><b>Learning to Simulate</b>. N. Ruiz, S. Schulter, M. Chandraker. ICLR 2019. (<a href="https://arxiv.org/abs/1810.02513">PDF</a>)</li>
+<li><b>Memory Warps for Learning Long-Term Online Video Representations</b>. T-H. Vu, W. Choi, S. Schulter, M. Chandraker. WACV 2019. (<a href="http://arxiv.org/abs/1803.10861">PDF</a>)</li>
+<li><b>Learning to Look around Objects for Top-View Representations of Outdoor Scenes</b>. S. Schulter, M. Zhai, N. Jacobs, M. Chandraker. ECCV 2018. (<a href="http://arxiv.org/abs/1803.10870">PDF</a>)</li>
+<li><b>Learning to Adapt Structured Output Space for Semantic Segmentation</b>. Y-H. Tsai, W-C. Hung, S. Schulter, K. Sohn, M-H. Yang, M. Chandraker. CVPR 2018. (<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Tsai_Learning_to_Adapt_CVPR_2018_paper.pdf">PDF</a>, <a href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/1435-supp.pdf">SUPP</a>)</li>
+<li><b>Deep Network Flow for Multi-Object Tracking</b>. S. Schulter, P. Vernaza, W. Choi, M. Chandraker. CVPR 2017. <a href="http://www.nec-labs.com/uploads/images/Department-Images/MediaAnalytics/papers/cvpr17_deepnetworkflow.pdf">(PDF</a>, <a href="http://www.nec-labs.com/uploads/images/Department-Images/MediaAnalytics/papers/cvpr17_deepnetworkflow_supp.pdf">SUPP</a>)</li>
+<li><b>Loss-Specific Training of Random Forests for Super-Resolution</b>. A. Grabner, G. Poier, M. Opitz, S. Schulter, P. M. Roth. Computer Vision Winter Workshop 2017. (<a href="http://cvww2017.prip.tuwien.ac.at/papers/CVWW2017_paper_23.pdf">PDF</a>)</li>
 
-<li><b>Interactive 3D Segmentation of Rock-Art by Enhanced Depth Maps and Gradient Preserving Regularization</b>. M. Zeppelzauer, G. Poier, M. Seidl, C. Reinbacher, S. Schulter, C. Breiteneder, H. Bischof. ACM Journal on Computing and Cultural Heritage 9 (4): 19:1-19:30, 2016 (<a href="http://dx.doi.org/10.1145/2950062">PDF</a>)
-</li>
-<li><b>Conditioned Regression Models for Non-Blind Single Image Super-Resolution</b>. G. Riegler, S. Schulter, M. Ruether, H. Bischof. ICCV 2015. (<a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Riegler_Conditioned_Regression_Models_ICCV_2015_paper.pdf">PDF</a>)
-</li>
-<li><b>Hybrid One-Shot 3D Hand Pose Estimation by Exploiting Uncertainties</b>. G. Poier, K. Roditakis, S. Schulter, D. Michel, H. Bischof A. A. Argyros. BMVC 2015. (<a href="https://files.icg.tugraz.at/f/0675245487/?raw=1">PDF</a>, <a href="https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/hybridhpe">PROJECT</a>)
-</li>
-<li><b>Interactive Segmentation of Rock-Art in High-Resolution 3D Reconstructions</b>. M. Zeppelzauer, G. Poier, M. Seidl, C. Reinbacher, C. Breiteneder, H. Bischof, S. Schulter. Digital Heritage Conference 2015. (<a href="http://ieeexplore.ieee.org/document/7419450/">PDF</a>)
-</li>
-<li><b>You Should Use Regression to Detect Cells</b>. P. Kainz, M. Urschler, S. Schulter, P. Wohlhart, V. Lepetit. MICCAI 2015. (<a href="https://link.springer.com/chapter/10.1007/978-3-319-24574-4_33">PDF</a>, <a href="https://github.com/pkainz/MICCAI2015">CODE</a>)
-</li>
-<li><b>Fast and Accurate Super Resolution with Random Forests</b>. S. Schulter, C. Leistner, H. Bischof. CVPR 2015. (<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Schulter_Fast_and_Accurate_2015_CVPR_paper.pdf">PDF</a>, <a href="http://lrs.icg.tugraz.at/pubs/schulter_cvpr_2015_supp.pdf">SUPP</a>, <a href="https://www.tugraz.at/institute/icg/research/team-bischof/learning-recognition-surveillance/downloads/forests/#srf">CODE</a>)
-</li>
+<li><b>Interactive 3D Segmentation of Rock-Art by Enhanced Depth Maps and Gradient Preserving Regularization</b>. M. Zeppelzauer, G. Poier, M. Seidl, C. Reinbacher, S. Schulter, C. Breiteneder, H. Bischof. ACM Journal on Computing and Cultural Heritage 9 (4): 19:1-19:30, 2016 (<a href="http://dx.doi.org/10.1145/2950062">PDF</a>)</li>
+<li><b>Conditioned Regression Models for Non-Blind Single Image Super-Resolution</b>. G. Riegler, S. Schulter, M. Ruether, H. Bischof. ICCV 2015. (<a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Riegler_Conditioned_Regression_Models_ICCV_2015_paper.pdf">PDF</a>)</li>
+<li><b>Hybrid One-Shot 3D Hand Pose Estimation by Exploiting Uncertainties</b>. G. Poier, K. Roditakis, S. Schulter, D. Michel, H. Bischof A. A. Argyros. BMVC 2015. (<a href="https://files.icg.tugraz.at/f/0675245487/?raw=1">PDF</a>, <a href="https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/hybridhpe">PROJECT</a>)</li>
+<li><b>Interactive Segmentation of Rock-Art in High-Resolution 3D Reconstructions</b>. M. Zeppelzauer, G. Poier, M. Seidl, C. Reinbacher, C. Breiteneder, H. Bischof, S. Schulter. Digital Heritage Conference 2015. (<a href="http://ieeexplore.ieee.org/document/7419450/">PDF</a>)</li>
+<li><b>You Should Use Regression to Detect Cells</b>. P. Kainz, M. Urschler, S. Schulter, P. Wohlhart, V. Lepetit. MICCAI 2015. (<a href="https://link.springer.com/chapter/10.1007/978-3-319-24574-4_33">PDF</a>, <a href="https://github.com/pkainz/MICCAI2015">CODE</a>)</li>
+<li><b>Fast and Accurate Super Resolution with Random Forests</b>. S. Schulter, C. Leistner, H. Bischof. CVPR 2015. (<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Schulter_Fast_and_Accurate_2015_CVPR_paper.pdf">PDF</a>, <a href="http://lrs.icg.tugraz.at/pubs/schulter_cvpr_2015_supp.pdf">SUPP</a>, <a href="https://www.tugraz.at/institute/icg/research/team-bischof/learning-recognition-surveillance/downloads/forests/#srf">CODE</a>)</li>
 
-<li><b>Hough Forests Revisited: An Approach to Multiple Instance Tracking from Multiple Cameras</b>. G. Poier, S. Schulter, S. Sternig, P. M. Roth, H. Bischof. GCPR 2014. (<a href="https://link.springer.com/chapter/10.1007/978-3-319-11752-2_41">PDF</a>)
-</li>
-<li><b>Accurate Object Detection with Joint Classification-Regression Random Forests</b>. S. Schulter, C. Leistner, P. Wohlhart, P. M. Roth, H. Bischof. CVPR 2014. (<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Schulter_Accurate_Object_Detection_2014_CVPR_paper.pdf">PDF</a>)
-</li>
+<li><b>Hough Forests Revisited: An Approach to Multiple Instance Tracking from Multiple Cameras</b>. G. Poier, S. Schulter, S. Sternig, P. M. Roth, H. Bischof. GCPR 2014. (<a href="https://link.springer.com/chapter/10.1007/978-3-319-11752-2_41">PDF</a>)</li>
+<li><b>Accurate Object Detection with Joint Classification-Regression Random Forests</b>. S. Schulter, C. Leistner, P. Wohlhart, P. M. Roth, H. Bischof. CVPR 2014. (<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Schulter_Accurate_Object_Detection_2014_CVPR_paper.pdf">PDF</a>)</li>
 
-<li><b>Alternating Regression Forests for Object Detection and Pose Estimation</b>. S. Schulter, C. Leistner, P. Wohlhart, P. M. Roth, H. Bischof. ICCV 2013. (<a href="http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Schulter_Alternating_Regression_Forests_2013_ICCV_paper.pdf">PDF</a>, <a href="https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/forests#adf">CODE</a>)
-</li>
-<li><b>Unsupervised Object Discovery and Segmentation in Videos</b>. S. Schulter, C. Leistner, P. M. Roth, H. Bischof. BMVC 2013. (<a href="http://www.bmva.org/bmvc/2013/Papers/paper0053/">PDF</a>)
-</li>
-<li><b>Ordinal Random Forests for Object Detection</b>. S. Schulter, P. M. Roth, H. Bischof. GCPR 2013. (<a href="https://link.springer.com/chapter/10.1007/978-3-642-40602-7_29">PDF</a>)
-</li>
-<li><b>Alternating Decision Forests</b>. S. Schulter, P. Wohlhart, C. Leistner, A. Saffari, P. M. Roth, H. Bischof. CVPR 2013. (<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Schulter_Alternating_Decision_Forests_2013_CVPR_paper.pdf">PDF</a>, <a href="https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/forests#adf">CODE</a>)
-</li>
+<li><b>Alternating Regression Forests for Object Detection and Pose Estimation</b>. S. Schulter, C. Leistner, P. Wohlhart, P. M. Roth, H. Bischof. ICCV 2013. (<a href="http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Schulter_Alternating_Regression_Forests_2013_ICCV_paper.pdf">PDF</a>, <a href="https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/forests#adf">CODE</a>)</li>
+<li><b>Unsupervised Object Discovery and Segmentation in Videos</b>. S. Schulter, C. Leistner, P. M. Roth, H. Bischof. BMVC 2013. (<a href="http://www.bmva.org/bmvc/2013/Papers/paper0053/">PDF</a>)</li>
+<li><b>Ordinal Random Forests for Object Detection</b>. S. Schulter, P. M. Roth, H. Bischof. GCPR 2013. (<a href="https://link.springer.com/chapter/10.1007/978-3-642-40602-7_29">PDF</a>)</li>
+<li><b>Alternating Decision Forests</b>. S. Schulter, P. Wohlhart, C. Leistner, A. Saffari, P. M. Roth, H. Bischof. CVPR 2013. (<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Schulter_Alternating_Decision_Forests_2013_CVPR_paper.pdf">PDF</a>, <a href="https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/forests#adf">CODE</a>)</li>
 
-<li><b>Discriminative Hough Forests for Object Detection</b>. P. Wohlhart, S. Schulter, M. Koestinger, P. M. Roth, H. Bischof. BMVC 2012. (<a href="http://www.bmva.org/bmvc/2012/BMVC/paper040/">PDF</a>)
-</li>
+<li><b>Discriminative Hough Forests for Object Detection</b>. P. Wohlhart, S. Schulter, M. Koestinger, P. M. Roth, H. Bischof. BMVC 2012. (<a href="http://www.bmva.org/bmvc/2012/BMVC/paper040/">PDF</a>)</li>
 
-<li><b>Improving Classifiers with Unlabeled Weakly-Related Videos</b>. C. Leistner, M. Godec, S. Schulter, A. Saffari, M. Werlberger, H. Bischof. CVPR 2011. (<a href="http://ieeexplore.ieee.org/document/5995475/?reload=true&arnumber=5995475">PDF</a>, <a href="https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/forests#vhf">CODE</a>)
-</li>
-<li><b>On-line Hough Forests</b>. S. Schulter, C. Leistner, P. M. Roth, L. Van Gool, H. Bischof. BMVC 2011. (<a href="http://www.bmva.org/bmvc/2011/proceedings/paper128/paper128.pdf">PDF</a>, <a href="https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/forests#ohf">CODE</a>)
-</li>
+<li><b>Improving Classifiers with Unlabeled Weakly-Related Videos</b>. C. Leistner, M. Godec, S. Schulter, A. Saffari, M. Werlberger, H. Bischof. CVPR 2011. (<a href="http://ieeexplore.ieee.org/document/5995475/?reload=true&amp;arnumber=5995475">PDF</a>, <a href="https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/forests#vhf">CODE</a>)</li>
+<li><b>On-line Hough Forests</b>. S. Schulter, C. Leistner, P. M. Roth, L. Van Gool, H. Bischof. BMVC 2011. (<a href="http://www.bmva.org/bmvc/2011/proceedings/paper128/paper128.pdf">PDF</a>, <a href="https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/forests#ohf">CODE</a>)</li>
 </ul>
 </div>
 </div>

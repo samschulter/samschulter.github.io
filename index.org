@@ -13,7 +13,7 @@
 # https://github.com/joshuaeckroth/cse3521-website
 
 * Samuel Schulter
-I'm a researcher in the [[http://www.nec-labs.com/research-departments/media-analytics/media-analytics-home][Media-Analytics Department at NEC-Labs America]] in Cupertino, CA.
+I'm a senior researcher in the [[http://www.nec-labs.com/research-departments/media-analytics/media-analytics-home][Media-Analytics Department at NEC-Labs America]] in Cupertino, CA.
 My research interests are in computer vision and machine learning. I'm currently working on object detection and tracking in videos and higher-level 3D scene understanding.
 I received my PhD in 2015 from Graz University of Technology under the supervision of Horst Bischof.
 
@@ -22,6 +22,8 @@ Email: samuel <at> nec-labs <dot> com
 [[https://scholar.google.com/citations?user=VQ6dsFEAAAAJ][Google Scholar]]
 
 * Publications
+- *A Parametric Top-View Representation of Complex Road Scenes*. Z. Wang, B. Liu, S. Schulter, M. Chandraker. CVPR 2019. ([[http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_A_Parametric_Top-View_Representation_of_Complex_Road_Scenes_CVPR_2019_paper.pdf][PDF]], [[http://openaccess.thecvf.com/content_CVPR_2019/supplemental/Wang_A_Parametric_Top-View_CVPR_2019_supplemental.pdf][SUPP]])
+- *A Dataset for High-level 3D Scene Understanding of Complex Road Scenes in the Top-View*. Z. Wang, B. Liu, S. Schulter, M. Chandraker. CVPR 2019 Workshop on 3D Scene Understanding for Vision, Graphics, and Robotics. ([[https://scene-understanding.com/papers/cvpr19_workshop_3d-scene-understanding_camera-ready_parametric-bev-dataset.pdf][PDF]])
 - *Learning to Simulate*. N. Ruiz, S. Schulter, M. Chandraker. ICLR 2019. ([[https://arxiv.org/abs/1810.02513][PDF]])
 - *Memory Warps for Learning Long-Term Online Video Representations*. T-H. Vu, W. Choi, S. Schulter, M. Chandraker. WACV 2019. ([[http://arxiv.org/abs/1803.10861][PDF]])
 - *Learning to Look around Objects for Top-View Representations of Outdoor Scenes*. S. Schulter, M. Zhai, N. Jacobs, M. Chandraker. ECCV 2018. ([[http://arxiv.org/abs/1803.10870][PDF]])
