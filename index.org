@@ -22,6 +22,7 @@ Email: samuel <at> nec-labs <dot> com
 [[https://scholar.google.com/citations?user=VQ6dsFEAAAAJ][Google Scholar]]
 
 * Publications
+- *Domain Adaptation for Structured Output via Discriminative Patch Representations*. Y-H. Tsai, K. Sohn, S. Schulter, M. Chandraker. ICCV 2019. ([[http://openaccess.thecvf.com/content_ICCV_2019/papers/Tsai_Domain_Adaptation_for_Structured_Output_via_Discriminative_Patch_Representations_ICCV_2019_paper.pdf][PDF]], [[http://openaccess.thecvf.com/content_ICCV_2019/supplemental/Tsai_Domain_Adaptation_for_ICCV_2019_supplemental.pdf][SUPP]])
 - *A Parametric Top-View Representation of Complex Road Scenes*. Z. Wang, B. Liu, S. Schulter, M. Chandraker. CVPR 2019. ([[http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_A_Parametric_Top-View_Representation_of_Complex_Road_Scenes_CVPR_2019_paper.pdf][PDF]], [[http://openaccess.thecvf.com/content_CVPR_2019/supplemental/Wang_A_Parametric_Top-View_CVPR_2019_supplemental.pdf][SUPP]])
 - *A Dataset for High-level 3D Scene Understanding of Complex Road Scenes in the Top-View*. Z. Wang, B. Liu, S. Schulter, M. Chandraker. CVPR 2019 Workshop on 3D Scene Understanding for Vision, Graphics, and Robotics. ([[https://scene-understanding.com/papers/cvpr19_workshop_3d-scene-understanding_camera-ready_parametric-bev-dataset.pdf][PDF]])
 - *Learning to Simulate*. N. Ruiz, S. Schulter, M. Chandraker. ICLR 2019. ([[https://arxiv.org/abs/1810.02513][PDF]])
