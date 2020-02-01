@@ -1,27 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,600,600i,700,700i');
+
 @media all
 {
     body {
-        font-family: Helvetica, Arial, sans-serif;
-        color: #333333;
+        font-family: "Times New Roman", Times, serif;
+        color: black;
         font-size: 16px;
-        max-width: 70%;
+        max-width: 700px;
         margin: auto;
     }
-    h2 {
-        color: #333333;
-        margin-top: 1.5em;
-        margin-bottom: -0.5em;
+    h1 {
+        font-family: 'PT Serif', serif;
+        color: black;
+        font-weight: normal;
+        font-size: 250%;
+        text-align: center;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
         padding: 0em;
     }
-    ul {
-        padding-left: 1em;
+    h2 {
+        /*font-family: "Times New Roman", Times, serif;*/
+        font-family: 'PT Serif', serif;
+        font-weight: normal;
+        color: black;
+        text-align: left;
+        margin-top: 0.0em;
+        margin-bottom: 0.5em;
+        padding: 0em;
     }
     a {
         text-decoration: none;
-        font-weight: bold;
+        font-weight: normal;
         color: #2b64bf;
     }
     a:hover {
-        color: #85cdf7;
+        color: #2b64bf;
+        text-decoration: underline;
+    }
+    hr {
+        margin: 25px 0px 25px 0px;
+        border: 0px;
+        border-top: 1px solid #DDD;
+        text-align: center;
+    }
+    p {
+        margin: 0 0 0 0;
+    }
+    p.contact {
+        text-align: center;
+    }
+    div.paper_container {
+        float: left;
+        margin: 0px 0px 20px 0px;
+    }
+    div.paper_image_container {
+        float: left;
+        width: 90px;
+        margin: 0px;
+        height: 100%;
+        padding-top: 5px;
+        padding-right: 5px;
+    }
+    img.paper_image {
+        width: 83px;
+        border: 1px solid white;
+        padding: 0px;
+        margin: 0px;
+    }
+    div.paper_info_container {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 14px;
+        float:left;
+        width:605px;
+        margin:0px;
+        height:100%;
+        line-height: 150%;
+    }
+    ul {
+        /*font-family: Helvetica, Arial, sans-serif;*/
+        font-size: 14px;
+        font-family: Verdana, Geneva, sans-serif;
+        padding-left: 0em;
+        margin-bottom: 20px;
+        list-style: none;
+    }
+    li {
+        margin: 0 0 10px 0;
+        line-height: 150%;
+    }
+    span.paper_title {
+        font-style: italic;
+        /* text-decoration: underline; */
     }
 }
