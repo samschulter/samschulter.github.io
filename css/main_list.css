@@ -52,8 +52,9 @@ a:hover {
 }
 
 strong, b {
-	color: #a0a0a1;
-	font-weight: 300;
+	/* color: #a0a0a1; */
+	/* font-weight: 300; */
+    font-weight: bold;
 }
 
 em, i {
@@ -99,6 +100,7 @@ h2 {
 	position: relative;
     background: #ffffff;
     border: 1px dashed #a0a0a1;
+    padding-bottom: 1em;
 }
 
 #main .thumb > h2 {
@@ -140,7 +142,6 @@ h2 {
 }
 
 #main .thumb > p.authors {
-    position: relative;
     margin-top: 0.5em;
     font-size: 0.75em;
 }
@@ -150,15 +151,35 @@ h2 {
     color: #404041;
 }
 
+#main .thumb > p.plain {
+    margin: 1em 1em 0em 1em;
+    border-left: 1px solid #a0a0a1;
+    padding-left: 0.5em;
+}
+
 #main .thumb {
 	width: 40.0%;
     margin: 0.5% 0% 0% 30%;
-    padding-bottom: 1em;
+}
+
+#main .separator {
+    border-bottom: 1px solid #a0a0a1;
+    color: #404041;
+    font-weight: bold;
+    font-size: 0.75em;
+    width: 40.0%;
+    margin: 1% 0% 0% 30%;
+    padding-left: 0.5em;
 }
 
 @media screen and (max-width: 1680px) {
 
 	#main .thumb {
+		width: 50.0%;
+        margin-left: 25.0%;
+	}
+
+    #main .separator {
 		width: 50.0%;
         margin-left: 25.0%;
 	}
@@ -172,6 +193,11 @@ h2 {
         margin-left: 20.0%;
 	}
 
+    #main .separator {
+		width: 60.0%;
+        margin-left: 20.0%;
+	}
+
 }
 
 @media screen and (max-width: 980px) {
@@ -181,11 +207,21 @@ h2 {
         margin-left: 10.0%;
 	}
 
+    #main .separator {
+		width: 80%;
+        margin-left: 10.0%;
+	}
+
 }
 
 @media screen and (max-width: 480px) {
 
 	#main .thumb {
+		width: 98%;
+        margin-left: 0.5%;
+	}
+
+    #main .separator {
 		width: 98%;
         margin-left: 0.5%;
 	}
