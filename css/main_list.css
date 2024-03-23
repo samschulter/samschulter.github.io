@@ -35,7 +35,7 @@ body {
 @media screen and (max-width: 1680px) {
 
 	body, input, select, textarea {
-		font-size: 11pt;
+		font-size: 110%;
 	}
 
 }
@@ -179,6 +179,17 @@ h2 {
     padding-left: 0.5em;
 }
 
+#main .separator_light {
+    border-bottom: 1px solid #cccccc;
+    color: #a0a0a1;
+    font-weight: normal;
+    font-size: 0.75em;
+    width: 40.0%;
+    margin: 1% 0% 0% 30%;
+    padding-left: 0.5em;
+	border-bottom-style: dashed;
+}
+
 @media screen and (max-width: 1680px) {
 
 	#main .thumb {
@@ -187,6 +198,11 @@ h2 {
 	}
 
     #main .separator {
+		width: 50.0%;
+        margin-left: 25.0%;
+	}
+
+	#main .separator_light {
 		width: 50.0%;
         margin-left: 25.0%;
 	}
@@ -205,6 +221,11 @@ h2 {
         margin-left: 20.0%;
 	}
 
+	#main .separator_light {
+		width: 60.0%;
+        margin-left: 20.0%;
+	}
+
 }
 
 @media screen and (max-width: 980px) {
@@ -219,6 +240,11 @@ h2 {
         margin-left: 10.0%;
 	}
 
+	#main .separator_light {
+		width: 80%;
+        margin-left: 10.0%;
+	}
+
 }
 
 @media screen and (max-width: 480px) {
@@ -229,6 +255,11 @@ h2 {
 	}
 
     #main .separator {
+		width: 98%;
+        margin-left: 0.5%;
+	}
+
+	#main .separator_light {
 		width: 98%;
         margin-left: 0.5%;
 	}
